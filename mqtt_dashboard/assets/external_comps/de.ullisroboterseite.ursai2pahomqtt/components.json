@@ -1,0 +1,633 @@
+[{
+ "categoryString": "EXTENSION",
+ "dateBuilt": "2020-11-15",
+ "nonVisible": "true",
+ "iconName": "aiwebres/icon.png",
+ "methods": [
+  {
+   "deprecated": "false",
+   "name": "Connect",
+   "description": "Connect to a MQTT broker.",
+   "params": [{
+    "name": "CleanSession",
+    "type": "boolean"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "ConnectWithLastWill",
+   "description": "Connect to a MQTT broker.",
+   "params": [
+    {
+     "name": "CleanSession",
+     "type": "boolean"
+    },
+    {
+     "name": "Topic",
+     "type": "text"
+    },
+    {
+     "name": "Message",
+     "type": "text"
+    },
+    {
+     "name": "Retain",
+     "type": "boolean"
+    },
+    {
+     "name": "QoS",
+     "type": "number"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "Disconnect",
+   "description": "Disconnects from the broker.",
+   "params": []
+  },
+  {
+   "deprecated": "false",
+   "name": "FromDictionary",
+   "description": "Export conection parameters to a dictionary.",
+   "params": [{
+    "name": "dict",
+    "type": "dictionary"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "IsNull",
+   "description": "Test whether an object is null.",
+   "params": [{
+    "name": "Object",
+    "type": "any"
+   }],
+   "returnType": "boolean"
+  },
+  {
+   "deprecated": "false",
+   "name": "Publish",
+   "description": "Publish a MQTT message. Retain flag is false, QoS is 0.",
+   "params": [
+    {
+     "name": "Topic",
+     "type": "text"
+    },
+    {
+     "name": "Message",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "PublishBinary",
+   "description": "Publishes a binary coded MQTT message.",
+   "params": [
+    {
+     "name": "Topic",
+     "type": "text"
+    },
+    {
+     "name": "BinaryMessage",
+     "type": "text"
+    },
+    {
+     "name": "RetainFlag",
+     "type": "boolean"
+    },
+    {
+     "name": "QoS",
+     "type": "number"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "PublishByteArray",
+   "description": "Publishes a binary array.",
+   "params": [
+    {
+     "name": "Topic",
+     "type": "text"
+    },
+    {
+     "name": "ByteArray",
+     "type": "any"
+    },
+    {
+     "name": "RetainFlag",
+     "type": "boolean"
+    },
+    {
+     "name": "QoS",
+     "type": "number"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "PublishEx",
+   "description": "Publish a MQTT message.",
+   "params": [
+    {
+     "name": "Topic",
+     "type": "text"
+    },
+    {
+     "name": "Message",
+     "type": "text"
+    },
+    {
+     "name": "RetainFlag",
+     "type": "boolean"
+    },
+    {
+     "name": "QoS",
+     "type": "number"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "Subscribe",
+   "description": "Subscribe a topic.",
+   "params": [
+    {
+     "name": "Topic",
+     "type": "text"
+    },
+    {
+     "name": "QoS",
+     "type": "number"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "SubscribeByteArray",
+   "description": "Subscribe a topic for receiving byte arrays.",
+   "params": [
+    {
+     "name": "Topic",
+     "type": "text"
+    },
+    {
+     "name": "QoS",
+     "type": "number"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "ToDictionary",
+   "description": "Export conection parameters to a dictionary.",
+   "params": [],
+   "returnType": "dictionary"
+  },
+  {
+   "deprecated": "false",
+   "name": "Unsubscribe",
+   "description": "Unsubscribe a topic.",
+   "params": [{
+    "name": "Topic",
+    "type": "text"
+   }]
+  }
+ ],
+ "blockProperties": [
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "Broker",
+   "description": "The IP address or hostname of the server to connect to.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ClientCertFile",
+   "description": "The name of the client certificate file.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ClientID",
+   "description": "The unique client Id. If this field is blank a random GUID is used.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ClientKeyFile",
+   "description": "The name of the client key file.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ClientKeyPassword",
+   "description": "The client key password.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ClientKeystoreFile",
+   "description": "The name of the client keystore file.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ClientKeystorePassword",
+   "description": "The client keystore password.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ClientPemFormatted",
+   "description": "The client certifacte and key files are PEM formatted.",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "ConnectionState",
+   "description": "The connection state:\n0: Disconnected. The client is not connected to a broker.\n1: Connecting. The client is currently creating a connection to a MQTT broker.\n2: Connected. The client is connected to a MQTT broker.\n3: Disconnecting. The client is currently disconnecting from the MQTT broker.\n4: ConnectionAbortet. The connection could not be established or was interrupted.",
+   "type": "number"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ConnectionTimeout",
+   "description": "Connection timeout [seconds].",
+   "type": "number"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "IsConnected",
+   "description": "true: Client is connected to a MQTT broker.",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "IsDisconnected",
+   "description": "true: Client is disconnected from the MQTT broker.",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "KeepAlive",
+   "description": "Keep alive interval [seconds].",
+   "type": "number"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "LastAction",
+   "description": "Returns the last Action the error code belongs to.",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "LastErrorCode",
+   "description": "Returns the code of the last error.",
+   "type": "number"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "LastErrorMessage",
+   "description": "Returns a text message about the last error.",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "LastExecptionCause",
+   "description": "Provides information on the last exception.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "MaxInflight",
+   "description": "The max inflight limits to how many messages we can send without receiving acknowledgments.\nIncrease this value in a high traffic environment.",
+   "type": "number"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "Port",
+   "description": "The port number of the server to connect to.",
+   "type": "number"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "Protocol",
+   "description": "The protocol to use.",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "StateConnected",
+   "description": "Constant for connection state 'Connected'.",
+   "type": "number"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "StateConnecting",
+   "description": "Constant for connection state 'Connecting'.",
+   "type": "number"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "StateConnectionAbortet",
+   "description": "Constant for connection state 'ConnectionAbortet'.",
+   "type": "number"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "StateDisconnected",
+   "description": "Constant for connection state 'Disconnected'.",
+   "type": "number"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "StateDisconnecting",
+   "description": "Constant for connection state 'Disconnecting'.",
+   "type": "number"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "TimeToWait",
+   "description": "Maximum time to wait for an action to complete [seconds].\n-1 means the action will not timeout.",
+   "type": "number"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "TrustedCertFile",
+   "description": "The name of the trusted certificate file.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "TruststoreFile",
+   "description": "The name of the truststore file.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "TruststorePassword",
+   "description": "The password of the truststore file.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "UserName",
+   "description": "The user name used authentication and authorization.",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "UserPassword",
+   "description": "The password used authentication and authorization.",
+   "type": "text"
+  }
+ ],
+ "helpUrl": "http://UllisRoboterSeite.de/android-AI2-PahoMQTT.html",
+ "type": "de.ullisroboterseite.ursai2pahomqtt.UrsPahoMqttClient",
+ "versionName": "1.0",
+ "androidMinSdk": 7,
+ "version": "1",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "UrsPahoMqttClient",
+ "helpString": "AI2 extension block for MQTT communication.",
+ "properties": [
+  {
+   "defaultValue": "",
+   "name": "Broker",
+   "editorArgs": [],
+   "editorType": "string"
+  },
+  {
+   "defaultValue": "",
+   "name": "ClientCertFile",
+   "editorArgs": [],
+   "editorType": "asset"
+  },
+  {
+   "defaultValue": "",
+   "name": "ClientID",
+   "editorArgs": [],
+   "editorType": "string"
+  },
+  {
+   "defaultValue": "",
+   "name": "ClientKeyFile",
+   "editorArgs": [],
+   "editorType": "asset"
+  },
+  {
+   "defaultValue": "",
+   "name": "ClientKeyPassword",
+   "editorArgs": [],
+   "editorType": "string"
+  },
+  {
+   "defaultValue": "",
+   "name": "ClientKeystoreFile",
+   "editorArgs": [],
+   "editorType": "asset"
+  },
+  {
+   "defaultValue": "",
+   "name": "ClientKeystorePassword",
+   "editorArgs": [],
+   "editorType": "string"
+  },
+  {
+   "defaultValue": "",
+   "name": "ClientPemFormatted",
+   "editorArgs": [],
+   "editorType": "boolean"
+  },
+  {
+   "defaultValue": "30",
+   "name": "ConnectionTimeout",
+   "editorArgs": [],
+   "editorType": "non_negative_integer"
+  },
+  {
+   "defaultValue": "60",
+   "name": "KeepAlive",
+   "editorArgs": [],
+   "editorType": "non_negative_integer"
+  },
+  {
+   "defaultValue": "10",
+   "name": "MaxInflight",
+   "editorArgs": [],
+   "editorType": "non_negative_integer"
+  },
+  {
+   "defaultValue": "1883",
+   "name": "Port",
+   "editorArgs": [],
+   "editorType": "non_negative_integer"
+  },
+  {
+   "defaultValue": "TCP",
+   "name": "Protocol",
+   "editorArgs": [
+    "TCP",
+    "SSL",
+    "TLS"
+   ],
+   "editorType": "choices"
+  },
+  {
+   "defaultValue": "-1",
+   "name": "TimeToWait",
+   "editorArgs": [],
+   "editorType": "integer"
+  },
+  {
+   "defaultValue": "",
+   "name": "TrustedCertFile",
+   "editorArgs": [],
+   "editorType": "asset"
+  },
+  {
+   "defaultValue": "",
+   "name": "TruststoreFile",
+   "editorArgs": [],
+   "editorType": "asset"
+  },
+  {
+   "defaultValue": "",
+   "name": "TruststorePassword",
+   "editorArgs": [],
+   "editorType": "text"
+  },
+  {
+   "defaultValue": "",
+   "name": "UserName",
+   "editorArgs": [],
+   "editorType": "string"
+  },
+  {
+   "defaultValue": "",
+   "name": "UserPassword",
+   "editorArgs": [],
+   "editorType": "string"
+  }
+ ],
+ "events": [
+  {
+   "deprecated": "false",
+   "name": "ConnectionStateChanged",
+   "description": "Connection state has changed.",
+   "params": [
+    {
+     "name": "NewState",
+     "type": "number"
+    },
+    {
+     "name": "StateString",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "ErrorOccurred",
+   "description": "Error occurred.",
+   "params": [
+    {
+     "name": "ActionName",
+     "type": "text"
+    },
+    {
+     "name": "ErrorCode",
+     "type": "number"
+    },
+    {
+     "name": "ErrorMessage",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "MessageReceived",
+   "description": "Message received.",
+   "params": [
+    {
+     "name": "Topic",
+     "type": "text"
+    },
+    {
+     "name": "Payload",
+     "type": "text"
+    },
+    {
+     "name": "Message",
+     "type": "text"
+    },
+    {
+     "name": "RetainFlag",
+     "type": "boolean"
+    },
+    {
+     "name": "DupFlag",
+     "type": "boolean"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "PublishedByteArrayReceived",
+   "description": "Message with byte array received.",
+   "params": [
+    {
+     "name": "Topic",
+     "type": "text"
+    },
+    {
+     "name": "ByteArray",
+     "type": "any"
+    },
+    {
+     "name": "RetainFlag",
+     "type": "boolean"
+    },
+    {
+     "name": "DupFlag",
+     "type": "boolean"
+    }
+   ]
+  }
+ ]
+}]
